@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); 
+/* font-family: 'Open Sans', sans-serif; */
+
+:root {
+    --purple: hsl(257, 40%, 49%);
+    --pink: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--purple);
+    background-image: url(./images/bg-desktop.svg);
+    background-size: contain;
+    background-position: center;  
+    background-attachment: fixed;
+}
+
+.header .banner-box {
+    height: 20vh;
+    display: flex;
+}
+
+.header .banner-box img {
+    width: 170px;
+    margin-left: 80px;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-top: 12px;
+}
+
+.main .container .left-box {
+    width: 55%;
+    margin-left: 80px;
+}
+
+.main .container .left-box img {
+    width: 95%;
+}
+
+.main .container .right-box {
+    width: 45%;
+    margin-left: 20px;
+    padding: 55px 100px 0px 0px;
+}
+
+.main .container .right-box h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.main .container .right-box h2 {
+    margin-top: 25px;
+    font-size: 0.950rem;
+    font-weight: 400;
+    line-height: 25px;
+    opacity: 0.8;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.main .container .right-box button {
+    margin-top: 25px;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 60px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0px 1px 4px #000;
+    color: var(--purple);
+    background-color: #fff;
+}
+
+.main .container .right-box button:hover {
+    color: #fff;
+    background-color: var(--pink);
+}
+
+.footer .media-icons {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 4%;
+    right: 7%;
+}
+
+.footer .media-icons div:not(:nth-child(1)) {
+    margin-left: 1.100rem;
+}
+
+.footer .media-icons div a {
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding: 9px;
+    color: #fff;
+}
+
+.footer .media-icons div a:hover {
+    color: var(--pink);
+    border: 1px solid var(--pink);
+}
+
+@media only screen and (max-width: 420px) {
+    
+    body {
+        background-image: url(./images/bg-mobile.svg);
+    }
+
+    .header .banner-box {
+        width: 100vw;
+        height: 6rem;
+    }
+    
+    .header .banner-box img {
+        margin-left: 30px;
+        width: 125px;
+    }
+    
+    .main .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main .container .left-box {
+        width: 100%;
+        margin: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .main .container .left-box img {
+        width: 100%;
+    }
+
+    .main .container .right-box {
+        width: 100%;
+        margin: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main .container .right-box h1 {
+        font-size: 1.600rem;
+        text-align: center;
+    }
+
+    .main .container .right-box h2 {
+        margin-top: 16px;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+    
+    .main .container .right-box button {
+        margin: 25px auto 0px auto;
+    }
+
+    .footer .media-icons {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 4rem;
+        right: 0rem;
+    }
+}
